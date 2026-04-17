@@ -10,8 +10,18 @@
   });
 
   // Mobile nav
-  function openMobileNav() { document.getElementById('mobileNav').classList.add('open'); }
-  function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
+  function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    if (nav.classList.contains('open')) { closeMobileNav(); } else { openMobileNav(); }
+  }
+  function openMobileNav() {
+    document.getElementById('mobileNav').classList.add('open');
+    document.querySelector('.burger').classList.add('open');
+  }
+  function closeMobileNav() {
+    document.getElementById('mobileNav').classList.remove('open');
+    document.querySelector('.burger').classList.remove('open');
+  }
 
   // Tab system
   function switchTab(id) {
@@ -41,6 +51,11 @@
     panel.querySelectorAll('.cat-separator').forEach(hr => {
       hr.style.display = subcat === 'all' ? '' : 'none';
     });
+  }
+
+  // Galeria scroll
+  function scrollGaleria(amount) {
+    document.getElementById('galeriaScroll').scrollBy({ left: amount, behavior: 'smooth' });
   }
 
   // IntersectionObserver for fade-up
