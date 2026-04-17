@@ -40,10 +40,12 @@
     padding: 12px 5vw;
     box-shadow: 0 1px 20px rgba(139,120,175,0.12);
   }
+  .nav-logo-link { display: flex; align-items: center; }
   .nav-logo {
     height: 62px;
     opacity: 0;
     transition: opacity 0.4s;
+    display: block;
   }
   nav.scrolled .nav-logo { opacity: 1; }
 
@@ -125,7 +127,7 @@
   .hero-img {
     position: absolute;
     inset: 0;
-    background-image: url('FILES/imagens/hero-bg.jpg');
+    background-image: url('FILES/fotos/BG_Topo.JPG');
     background-size: cover;
     background-position: center top;
     transform: scale(1.05);
@@ -292,11 +294,15 @@
   .sobre-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+    grid-template-rows: auto auto;
+    column-gap: 80px;
+    row-gap: 0;
+    align-items: start;
   }
   .sobre-photo {
     position: relative;
+    grid-row: span 2;
+    align-self: center;
   }
   .sobre-photo-main {
     width: 100%;
@@ -343,7 +349,8 @@
     margin-top: 4px;
     opacity: 0.85;
   }
-  .sobre-text { padding-left: 10px; padding-top: 28px; }
+  .sobre-text-header { padding-left: 10px; padding-top: 28px; }
+  .sobre-text-body   { padding-left: 10px; padding-top: 24px; }
   .signature-img {
     height: 60px;
     margin-top: 30px;
@@ -361,7 +368,7 @@
     min-height: 600px;
   }
   .casamentos-content {
-    padding: 100px 5vw 100px calc(50vw - 580px + 5vw);
+    padding: 100px 5vw 100px max(5vw, calc(50vw - 580px + 5vw));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -455,8 +462,14 @@
     display: flex;
     justify-content: center;
     gap: 0;
-    margin-bottom: 60px;
+    margin-bottom: 0;
     border-bottom: 1px solid rgba(139,120,175,0.2);
+    position: sticky;
+    top: 86px;
+    z-index: 100;
+    background: var(--cream);
+    box-shadow: 0 2px 12px rgba(61,53,80,0.08);
+    padding: 0 5vw;
   }
   .tab-btn {
     font-family: 'Montserrat', sans-serif;
@@ -486,7 +499,45 @@
   .tab-btn:hover { color: var(--dark); }
 
   .tab-panel { display: none; }
-  .tab-panel.active { display: block; }
+  .tab-panel.active { display: block; padding-top: 12px; }
+
+  /* Sub-category pill navigation */
+  .subcat-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 36px;
+    position: sticky;
+    top: 134px; /* navbar(86) + tabs(~48) */
+    z-index: 99;
+    background: var(--cream);
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(61,53,80,0.05);
+  }
+  .subcat-nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    background: rgba(139,120,175,0.08);
+    border: 1px solid rgba(139,120,175,0.2);
+    padding: 7px 14px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .subcat-nav a:hover {
+    background: rgba(139,120,175,0.18);
+    color: var(--dark);
+  }
+  .subcat-nav a.subcat-active {
+    background: var(--purple-pale);
+    color: var(--dark);
+    border-color: var(--purple-light);
+  }
 
   /* Subcategory heading inside tab */
   .cat-title {
@@ -494,6 +545,7 @@
     font-size: 38px;
     color: var(--dark);
     margin-bottom: 8px;
+    scroll-margin-top: 190px; /* navbar(86) + tabs(40) + subcat-nav(45) + folga */
   }
   .cat-price {
     font-family: 'Montserrat', sans-serif;
@@ -798,19 +850,26 @@
   @media (max-width: 900px) {
     .nav-links { display: none; }
     .burger { display: flex; }
-    .sobre-grid { grid-template-columns: 1fr; }
+    .sobre-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .sobre-photo        { grid-row: auto; order: 2; }
+    .sobre-text-header  { order: 1; padding-left: 0; padding-top: 0; }
+    .sobre-text-body    { order: 3; padding-left: 0; padding-top: 20px; }
     .sobre-photo-accent { display: none; }
     .sobre-photo-badge { left: 12px; }
     .casamentos-inner { grid-template-columns: 1fr; }
     .casamentos-img-col { height: 300px; position: relative; }
     .casamentos-img-main { position: absolute; }
-    .casamentos-content { padding: 60px 0; }
+    .casamentos-content { padding: 60px 5vw; }
     .casamentos-features { grid-template-columns: 1fr; }
     .trio-grid { grid-template-columns: 1fr; height: auto; }
     .trio-item { height: 260px; }
     .orcamentos-grid { grid-template-columns: 1fr; gap: 48px; }
-    .tabs { flex-wrap: wrap; }
-    .tab-btn { padding: 14px 20px; }
+    .tabs { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; top: 86px; padding: 0 3vw; scrollbar-width: none; }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab-btn { padding: 14px 20px; flex-shrink: 0; }
+    .subcat-nav { top: 128px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+    .subcat-nav::-webkit-scrollbar { display: none; }
+    .subcat-nav a { flex-shrink: 0; }
     footer { flex-direction: column; text-align: center; }
   }
   @media (max-width: 600px) {

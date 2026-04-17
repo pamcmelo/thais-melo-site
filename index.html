@@ -23,7 +23,7 @@
 
 <!-- NAVBAR -->
 <nav id="navbar">
-  <img class="nav-logo" src="FILES/Logo-tata-padrao.svg" alt="Tata Gourmet">
+  <a href="#hero" class="nav-logo-link"><img class="nav-logo" src="FILES/Logo-tata-padrao.svg" alt="Tata Gourmet"></a>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre Nós</a></li>
     <li><a href="#cardapio" onclick="switchTab('doces-finos')">Doces Finos</a></li>
@@ -76,10 +76,12 @@
           <span class="photo-placeholder-label-sm">Detalhe de doce fino</span>
         </div>
       </div>
-      <div class="sobre-text">
+      <div class="sobre-text-header">
         <span class="section-eyebrow fade-up">Nossa História</span>
         <h2 class="section-title fade-up fade-up-delay-1">Com amor desde<br>o primeiro doce</h2>
         <div class="divider fade-up fade-up-delay-2"></div>
+      </div>
+      <div class="sobre-text-body">
         <p class="section-body fade-up fade-up-delay-2">
           A Thais sempre soube que um casamento não é apenas uma cerimônia — é a realização de um sonho construído nos menores detalhes. Planejou cada detalhe do próprio casamento com o cuidado de quem ama de verdade, e foi nesse processo que percebeu o quanto os doces têm o poder de transformar um momento em memória.
         </p>
@@ -159,18 +161,28 @@
       <div class="divider center"></div>
       <p class="cardapio-intro">Pedido mínimo de 20 unidades por sabor. Combinações disponíveis sob consulta.</p>
     </div>
+  </div>
 
-    <!-- TABS -->
-    <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('doces-finos')">Doces Finos</button>
-      <button class="tab-btn" onclick="switchTab('brigadeiros')">Brigadeiros</button>
-      <button class="tab-btn" onclick="switchTab('criacoes')">Criações da Tata</button>
-      <button class="tab-btn" onclick="switchTab('caixas')">Caixas</button>
-    </div>
+  <!-- TABS — fora do container para sticky full-width -->
+  <div class="tabs" id="cardapio-tabs">
+    <button class="tab-btn active" onclick="switchTab('doces-finos')">Doces Finos</button>
+    <button class="tab-btn" onclick="switchTab('brigadeiros')">Brigadeiros</button>
+    <button class="tab-btn" onclick="switchTab('criacoes')">Criações da Tata</button>
+    <button class="tab-btn" onclick="switchTab('caixas')">Caixas</button>
+  </div>
+
+  <div class="container">
 
     <!-- DOCES FINOS -->
     <div class="tab-panel active" id="panel-doces-finos">
-      <h3 class="cat-title">Doces Finos</h3>
+      <div class="subcat-nav">
+        <a class="subcat-active" data-filter="all" href="#" onclick="filterSubcat(this,'panel-doces-finos','all');return false;">Todos</a>
+        <a data-filter="doces-finos" href="#" onclick="filterSubcat(this,'panel-doces-finos','doces-finos');return false;">Doces Finos</a>
+        <a data-filter="copinhos" href="#" onclick="filterSubcat(this,'panel-doces-finos','copinhos');return false;">Copinhos &amp; Cestinhas</a>
+        <a data-filter="bombons" href="#" onclick="filterSubcat(this,'panel-doces-finos','bombons');return false;">Bombons</a>
+      </div>
+      <div class="subcat-group" data-subcat="doces-finos">
+      <h3 class="cat-title" id="subcat-doces-finos">Doces Finos</h3>
       <div class="products-grid">
         <div class="product-card">
           <img class="product-img" src="FILES/imagens/produto-1.jpg" alt="Delicia de Limão">
@@ -282,8 +294,10 @@
         </div>
       </div>
 
+      </div><!-- /subcat-group doces-finos -->
       <hr class="cat-separator">
-<h3 class="cat-title">Copinhos e Cestinhas</h3>
+      <div class="subcat-group" data-subcat="copinhos">
+      <h3 class="cat-title" id="subcat-copinhos">Copinhos e Cestinhas</h3>
       <div class="products-grid">
         <div class="product-card">
           <img class="product-img" src="FILES/imagens/produto-5.jpg" alt="Cestinha de Frutas Vermelhas">
@@ -348,8 +362,10 @@
         </div>
       </div>
 
+      </div><!-- /subcat-group copinhos -->
       <hr class="cat-separator">
-<h3 class="cat-title">Bombons</h3>
+      <div class="subcat-group" data-subcat="bombons">
+      <h3 class="cat-title" id="subcat-bombons">Bombons</h3>
       <div class="products-grid">
         <div class="product-card">
           <img class="product-img" src="FILES/imagens/produto-8.jpg" alt="Bombom de Maracujá">
@@ -449,179 +465,184 @@
           </div>
         </div>
       </div>
+      </div><!-- /subcat-group bombons -->
     </div>
     <!-- BRIGADEIROS -->
     <div class="tab-panel" id="panel-brigadeiros">
-      <h3 class="cat-title">Brigadeiros Gourmet</h3>
+      <div class="subcat-nav">
+        <a class="subcat-active" data-filter="all" href="#" onclick="filterSubcat(this,'panel-brigadeiros','all');return false;">Todos</a>
+        <a data-filter="brig-gourmet" href="#" onclick="filterSubcat(this,'panel-brigadeiros','brig-gourmet');return false;">Gourmet</a>
+        <a data-filter="brig-especiais" href="#" onclick="filterSubcat(this,'panel-brigadeiros','brig-especiais');return false;">Especiais</a>
+        <a data-filter="brig-belga" href="#" onclick="filterSubcat(this,'panel-brigadeiros','brig-belga');return false;">Linha Belga</a>
+        <a data-filter="brig-trad" href="#" onclick="filterSubcat(this,'panel-brigadeiros','brig-trad');return false;">Tradicionais</a>
+      </div>
+
+      <div class="subcat-group" data-subcat="brig-gourmet">
+      <h3 class="cat-title" id="subcat-brig-gourmet">Brigadeiros Gourmet</h3>
       <div class="products-grid">
         <div class="product-card">
           <img class="product-img" src="FILES/imagens/produto-9.jpg" alt="Brigadeiros Gourmet">
           <div class="product-info">
             <h3 class="product-name">Surpresinha de Uva</h3>
-            <p class="product-desc">Uma deliciosa surpresa de uva envolta em nossa receita especial.</p></span>
+            <p class="product-desc">Uma deliciosa surpresa de uva envolta em nossa receita especial.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🍫</span><span>📷 Leite Ninho com Nutella</span></div>
           <div class="product-info">
             <h3 class="product-name">Leite Ninho com Nutella</h3>
-            <p class="product-desc">O clássico brigadeiro de leite ninho finalizado com uma roseta de Nutella.</p></span>
+            <p class="product-desc">O clássico brigadeiro de leite ninho finalizado com uma roseta de Nutella.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🍮</span><span>📷 Creme Brulé</span></div>
           <div class="product-info">
             <h3 class="product-name">Creme Brulé</h3>
-            <p class="product-desc">Inspirado na sobremesa francesa, o brigadeiro mais elegante do cardápio.</p></span>
+            <p class="product-desc">Inspirado na sobremesa francesa, o brigadeiro mais elegante do cardápio.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🍌</span><span>📷 Banoffe</span></div>
           <div class="product-info">
             <h3 class="product-name">Banoffe</h3>
-            <p class="product-desc">A sofisticação do banoffe em forma de brigadeiro — doce de leite, banana e amendoim.</p></span>
+            <p class="product-desc">A sofisticação do banoffe em forma de brigadeiro — doce de leite, banana e amendoim.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🥥</span><span>📷 Prestígio</span></div>
           <div class="product-info">
             <h3 class="product-name">Prestígio</h3>
-            <p class="product-desc">Chocolate com coco, uma combinação clássica e irresistível.</p></span>
+            <p class="product-desc">Chocolate com coco, uma combinação clássica e irresistível.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🍫</span><span>📷 Chocolate Laka</span></div>
           <div class="product-info">
             <h3 class="product-name">Chocolate Laka</h3>
-            <p class="product-desc">A maciez e leveza do chocolate Laka em cada mordida.</p></span>
+            <p class="product-desc">A maciez e leveza do chocolate Laka em cada mordida.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🍃</span><span>📷 Chocomenta</span></div>
           <div class="product-info">
             <h3 class="product-name">Chocomenta</h3>
-            <p class="product-desc">Para os amantes da combinação perfeita: chocolate e menta.</p></span>
+            <p class="product-desc">Para os amantes da combinação perfeita: chocolate e menta.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🍋</span><span>📷 Limão Siciliano</span></div>
           <div class="product-info">
             <h3 class="product-name">Limão Siciliano</h3>
-            <p class="product-desc">O sabor cítrico e refrescante do limão siciliano em um brigadeiro leve e sofisticado.</p></span>
+            <p class="product-desc">O sabor cítrico e refrescante do limão siciliano em um brigadeiro leve e sofisticado.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🥜</span><span>📷 Paçoca</span></div>
           <div class="product-info">
             <h3 class="product-name">Paçoca</h3>
-            <p class="product-desc">O sabor genuinamente brasileiro da paçoca em um brigadeiro artesanal.</p></span>
+            <p class="product-desc">O sabor genuinamente brasileiro da paçoca em um brigadeiro artesanal.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🍓</span><span>📷 Sensação</span></div>
           <div class="product-info">
             <h3 class="product-name">Sensação</h3>
-            <p class="product-desc">Brigadeiro de chocolate com recheio de brigadeiro de morango — um contraste perfeito.</p></span>
+            <p class="product-desc">Brigadeiro de chocolate com recheio de brigadeiro de morango — um contraste perfeito.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🧁</span><span>📷 Churros</span></div>
           <div class="product-info">
             <h3 class="product-name">Churros</h3>
-            <p class="product-desc">Tudo o que você ama em um churros, agora no formato de brigadeiro gourmet.</p></span>
+            <p class="product-desc">Tudo o que você ama em um churros, agora no formato de brigadeiro gourmet.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>☕</span><span>📷 Café</span></div>
           <div class="product-info">
             <h3 class="product-name">Café</h3>
-            <p class="product-desc">Para os apaixonados por café, um brigadeiro intenso e aromático.</p></span>
+            <p class="product-desc">Para os apaixonados por café, um brigadeiro intenso e aromático.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🌺</span><span>📷 Maracujá</span></div>
           <div class="product-info">
             <h3 class="product-name">Maracujá</h3>
-            <p class="product-desc">O toque tropical e levemente ácido do maracujá em um brigadeiro que encanta.</p></span>
+            <p class="product-desc">O toque tropical e levemente ácido do maracujá em um brigadeiro que encanta.</p>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- BRIGADEIROS TRADICIONAIS -->
-
+      </div><!-- /subcat-group brig-gourmet -->
       <hr class="cat-separator">
-      <h3 class="cat-title">Brigadeiros Especiais</h3>
+      <div class="subcat-group" data-subcat="brig-especiais">
+      <h3 class="cat-title" id="subcat-brig-especiais">Brigadeiros Especiais</h3>
       <div class="products-grid">
-<div class="product-card">
+        <div class="product-card">
           <img class="product-img" src="FILES/imagens/produto-10.jpg" alt="Brigadeiros Especiais">
           <div class="product-info">
             <h3 class="product-name">Ferrero Rocher</h3>
-            <p class="product-desc">Toda a sofisticação do Ferrero em um brigadeiro artesanal incrível.</p></span>
+            <p class="product-desc">Toda a sofisticação do Ferrero em um brigadeiro artesanal incrível.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🥥</span><span>📷 Rafaello</span></div>
           <div class="product-info">
             <h3 class="product-name">Rafaello</h3>
-            <p class="product-desc">A elegância do Rafaello original, agora em versão artesanal e ainda mais gostosa.</p></span>
+            <p class="product-desc">A elegância do Rafaello original, agora em versão artesanal e ainda mais gostosa.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>❤️</span><span>📷 Romeu e Julieta</span></div>
           <div class="product-info">
             <h3 class="product-name">Romeu e Julieta</h3>
-            <p class="product-desc">A combinação clássica de queijo e goiabada em forma de brigadeiro — perfeito para casamentos.</p></span>
+            <p class="product-desc">A combinação clássica de queijo e goiabada em forma de brigadeiro — perfeito para casamentos.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🍫</span><span>📷 Kinder</span></div>
           <div class="product-info">
             <h3 class="product-name">Kinder</h3>
-            <p class="product-desc">Tudo o que você ama no chocolate Kinder, em um brigadeiro que encanta crianças e adultos.</p></span>
+            <p class="product-desc">Tudo o que você ama no chocolate Kinder, em um brigadeiro que encanta crianças e adultos.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🌿</span><span>📷 Pistache</span></div>
           <div class="product-info">
             <h3 class="product-name">Pistache</h3>
-            <p class="product-desc">O brigadeiro gourmet mais pedido do momento. Sofisticado, diferente e irresistível.</p></span>
+            <p class="product-desc">O brigadeiro gourmet mais pedido do momento. Sofisticado, diferente e irresistível.</p>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- BRIGADEIROS BELGA -->
         <div class="product-card">
-          <div class="product-img-placeholder"><span>🍫</span><span>Brigadeiro de Chocolate ao Leite</span></div>
+          <div class="product-img-placeholder"><span>🍫</span><span>📷 Brigadeiro de Chocolate ao Leite</span></div>
           <div class="product-info">
             <h3 class="product-name">Brigadeiro de Chocolate ao Leite</h3>
             <p class="product-desc">Brigadeiro especial feito com chocolate ao leite de alta qualidade, coberto com granulado crocante.</p>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-img-placeholder"><span>ourico</span><span>Ourico</span></div>
+          <div class="product-img-placeholder"><span>🦔</span><span>📷 Ourico</span></div>
           <div class="product-info">
             <h3 class="product-name">Ourico</h3>
             <p class="product-desc">Brigadeiro em formato de ourico, feito com chocolate e granulado especial.</p>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-img-placeholder"><span>nozes</span><span>Nozes</span></div>
+          <div class="product-img-placeholder"><span>🌰</span><span>📷 Nozes</span></div>
           <div class="product-info">
             <h3 class="product-name">Nozes</h3>
-            <p class="product-desc">Brigadeiro artesanal coberto com nozes selecionadas — sofisticado e irresistivel.</p>
+            <p class="product-desc">Brigadeiro artesanal coberto com nozes selecionadas — sofisticado e irresistível.</p>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-img-placeholder"><span>cream</span><span>Nutty Cream</span></div>
+          <div class="product-img-placeholder"><span>🍫</span><span>📷 Nutty Cream</span></div>
           <div class="product-info">
             <h3 class="product-name">Nutty Cream</h3>
             <p class="product-desc">Brigadeiro cremoso com blend de nozes e creme especial da Tata.</p>
           </div>
         </div>
         <div class="product-card">
-          <div class="product-img-placeholder"><span>tortinha</span><span>Tortinha de Morango</span></div>
+          <div class="product-img-placeholder"><span>🍓</span><span>📷 Tortinha de Morango</span></div>
           <div class="product-info">
             <h3 class="product-name">Tortinha de Morango</h3>
             <p class="product-desc">Brigadeiro em formato de tortinha com morango fresco e cobertura especial.</p>
@@ -629,77 +650,81 @@
         </div>
       </div>
 
+      </div><!-- /subcat-group brig-especiais -->
       <hr class="cat-separator">
-      <h3 class="cat-title">Brigadeiros Linha Belga</h3>
+      <div class="subcat-group" data-subcat="brig-belga">
+      <h3 class="cat-title" id="subcat-brig-belga">Brigadeiros Linha Belga</h3>
       <p class="section-body section-body-sm">Nossa linha premium utiliza apenas chocolate belga importado.</p>
       <div class="products-grid">
-<div class="product-card">
+        <div class="product-card">
           <img class="product-img" src="FILES/imagens/produto-11.jpg" alt="Chocolate Belga ao Leite">
           <div class="product-info">
             <h3 class="product-name">Chocolate Belga ao Leite</h3>
-            <p class="product-desc">Brigadeiro feito com chocolate belga ao leite — intenso, cremoso e inconfundível.</p></span>
+            <p class="product-desc">Brigadeiro feito com chocolate belga ao leite — intenso, cremoso e inconfundível.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🍫</span><span>📷 Chocolate Belga Meio-Amargo</span></div>
           <div class="product-info">
             <h3 class="product-name">Chocolate Belga Meio-Amargo</h3>
-            <p class="product-desc">Para os que apreciam um chocolate mais encorpado e sofisticado.</p></span>
+            <p class="product-desc">Para os que apreciam um chocolate mais encorpado e sofisticado.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🤍</span><span>📷 Chocolate Belga ao Leite Branco</span></div>
           <div class="product-info">
             <h3 class="product-name">Chocolate Belga ao Leite Branco</h3>
-            <p class="product-desc">A suavidade e cremosidade do chocolate belga branco em cada mordida.</p></span>
+            <p class="product-desc">A suavidade e cremosidade do chocolate belga branco em cada mordida.</p>
           </div>
         </div>
       </div>
 
+      </div><!-- /subcat-group brig-belga -->
       <hr class="cat-separator">
-      <h3 class="cat-title">Brigadeiros Tradicionais</h3>
+      <div class="subcat-group" data-subcat="brig-trad">
+      <h3 class="cat-title" id="subcat-brig-trad">Brigadeiros Tradicionais</h3>
       <div class="products-grid">
-<div class="product-card">
+        <div class="product-card">
           <img class="product-img" src="FILES/imagens/produto-12.jpg" alt="Brigadeiros Tradicionais">
           <div class="product-info">
             <h3 class="product-name">Brigadeiro Tradicional</h3>
-            <p class="product-desc">O clássico de sempre, feito com a receita artesanal da Tata. Irresistível.</p></span>
+            <p class="product-desc">O clássico de sempre, feito com a receita artesanal da Tata. Irresistível.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🤍</span><span>📷 Beijinho</span></div>
           <div class="product-info">
             <h3 class="product-name">Beijinho</h3>
-            <p class="product-desc">O doce de coco favorito do Brasil, numa versão artesanal que derrete na boca.</p></span>
+            <p class="product-desc">O doce de coco favorito do Brasil, numa versão artesanal que derrete na boca.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>⭐</span><span>📷 Leite Ninho</span></div>
           <div class="product-info">
             <h3 class="product-name">Leite Ninho</h3>
-            <p class="product-desc">O irresistível brigadeiro de leite em pó que conquistou o coração de todo mundo.</p></span>
+            <p class="product-desc">O irresistível brigadeiro de leite em pó que conquistou o coração de todo mundo.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🩷</span><span>📷 Bicho de Pé</span></div>
           <div class="product-info">
             <h3 class="product-name">Bicho de Pé</h3>
-            <p class="product-desc">Morangos, morango e mais morango — o brigadeiro mais colorido e alegre da festa.</p></span>
+            <p class="product-desc">Morangos, morango e mais morango — o brigadeiro mais colorido e alegre da festa.</p>
           </div>
         </div>
         <div class="product-card">
           <div class="product-img-placeholder"><span>🍫</span><span>📷 Choconinho</span></div>
           <div class="product-info">
             <h3 class="product-name">Choconinho</h3>
-            <p class="product-desc">A união perfeita entre o chocolate e o leite ninho — um clássico que nunca para de agradar.</p></span>
+            <p class="product-desc">A união perfeita entre o chocolate e o leite ninho — um clássico que nunca para de agradar.</p>
           </div>
         </div>
       </div>
+      </div><!-- /subcat-group brig-trad -->
 
       <p class="forminha-note">
         * Todos acompanham forminhas sanfonadas comuns. Forminhas 4 pétalas cobradas à parte.
       </p>
-      </div>
     </div>
 
     <!-- CRIACOES DA TATA -->
