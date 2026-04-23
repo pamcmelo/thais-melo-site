@@ -14,8 +14,8 @@
 <!-- Mobile nav overlay -->
 <div class="mobile-nav" id="mobileNav">
   <a href="#sobre" onclick="closeMobileNav()">Sobre nós</a>
-  <a href="#cardapio" onclick="switchTab('doces-finos'); closeMobileNav()">Doces Finos</a>
-  <a href="#cardapio" onclick="switchTab('brigadeiros'); closeMobileNav()">Brigadeiros</a>
+  <a href="#cardapio" onclick="closeMobileNav()">Cardápio</a>
+  <a href="galeria.html" onclick="closeMobileNav()">Galeria</a>
   <a href="#orcamentos" onclick="closeMobileNav()">Orçamentos</a>
   <a href="#contato" onclick="closeMobileNav()">Contato</a>
 </div>
@@ -25,8 +25,8 @@
   <a href="#hero" class="nav-logo-link"><img class="nav-logo" src="FILES/Logo-tata-padrao.png" alt="Tata Gourmet"></a>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre Nós</a></li>
-    <li><a href="#cardapio" onclick="switchTab('doces-finos')">Doces Finos</a></li>
-    <li><a href="#cardapio" onclick="switchTab('brigadeiros')">Brigadeiros</a></li>
+    <li><a href="#cardapio">Cardápio</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
     <li><a href="#orcamentos">Orçamentos</a></li>
     <li><a href="#contato">Contato</a></li>
     <li><a href="https://wa.me/5541992086265?text=Ol%C3%A1%2C+Thais%21+Gostaria+de+solicitar+um+or%C3%A7amento+para+o+meu+casamento.+" target="_blank" class="nav-cta">Fale Conosco</a></li>
@@ -161,6 +161,9 @@
 <button class="galeria-arrow galeria-arrow-right" onclick="scrollGaleria(640)">&#8250;</button>
 <div class="galeria-hint">← Deslize para ver mais →</div>
 </div>
+<div class="galeria-cta-link">
+  <a href="galeria.html">Ver galeria completa →</a>
+</div>
 
 <!-- CARDÁPIO -->
 <section id="cardapio" class="section-pad">
@@ -189,10 +192,14 @@
     <div class="tab-panel" id="panel-caixas"></div>
     <div class="tab-panel" id="panel-variados"></div>
 
-    <!-- CTA below menu -->
-    <div class="cardapio-cta-area">
-      <p class="cardapio-cta-text">Não encontrou o que procurava? Montamos combinações personalizadas para o seu evento.</p>
-      <a href="https://wa.me/5541992086265?text=Ol%C3%A1%2C+Thais%21+Gostaria+de+solicitar+um+or%C3%A7amento+para+o+meu+casamento.+" target="_blank" class="btn-primary">Solicitar Orçamento Personalizado</a>
+  </div>
+
+  <!-- CTA below menu -->
+  <div class="cardapio-cta-area">
+    <p class="cardapio-cta-text">Não encontrou o que procurava? Montamos combinações personalizadas para o seu evento.</p>
+    <div class="cardapio-cta-buttons">
+      <a href="https://wa.me/5541992086265?text=Ol%C3%A1%2C+Thais%21+Gostaria+de+solicitar+um+or%C3%A7amento+para+o+meu+casamento.+" target="_blank" class="btn-primary">Solicitar Orçamento</a>
+      <a href="#cardapio" class="btn-secondary-light">Ver Cardápio</a>
     </div>
   </div>
 </section>
@@ -286,6 +293,7 @@
   <ul class="footer-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#cardapio">Cardápio</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
     <li><a href="#orcamentos">Orçamentos</a></li>
     <li><a href="https://wa.me/5541992086265" target="_blank">WhatsApp</a></li>
   </ul>

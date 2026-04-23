@@ -83,7 +83,7 @@
     });
 
     const SPEED = 0.6;         // px por frame (~36px/s a 60fps)
-    const RESUME_DELAY = 1800; // ms até retomar após interação
+    const RESUME_DELAY = 500;  // ms até retomar após interação
     let paused = false;
     let resumeTimer = null;
 
@@ -236,6 +236,13 @@
         grouped[cat].subcatOrder = SUBCAT_ORDER[cat].filter(s => grouped[cat].subcats[s]);
       }
       panel.innerHTML = renderPanel(grouped[cat], panelId);
+    }
+
+    // Default: abre doces-finos direto na primeira subcategoria, não em "Todos"
+    const dFPanel = document.getElementById('panel-doces-finos');
+    if (dFPanel) {
+      const firstBtn = dFPanel.querySelector('.subcat-nav a:not([data-filter="all"])');
+      if (firstBtn) firstBtn.click();
     }
   }
 

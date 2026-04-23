@@ -13,7 +13,7 @@
 
   * { margin:0; padding:0; box-sizing:border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
 
   body {
     background: var(--bg);
@@ -377,6 +377,7 @@
   .casamentos-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0;
     min-height: 600px;
     overflow: hidden;
   }
@@ -392,8 +393,8 @@
   }
   .casamentos-img-main {
     position: absolute;
-    inset: 0;
-    background-image: url('FILES/imagens/casamentos-bg.jpg');
+    top: 0; right: 0; bottom: 0; left: -1px;
+    background-image: url('FILES/fotos/porque-escolher.JPG');
     background-size: cover;
     background-position: center;
   }
@@ -421,7 +422,7 @@
   .feature-card p {
     font-size: 16px;
     color: rgba(255,255,255,0.7);
-    line-height: 1.6;
+    line-height: 1.4;
   }
 
   /* ─── DESTAQUE TRIO (Wedding Gallery) ─── */
@@ -445,6 +446,8 @@
   }
   .galeria-wrapper {
     position: relative;
+    overflow: hidden;
+    background: var(--purple);
   }
   .galeria-hint {
     text-align: center;
@@ -452,7 +455,7 @@
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--text-light);
+    color: rgba(255,255,255,0.45);
     padding: 12px 0 0;
   }
   .galeria-arrow {
@@ -992,18 +995,59 @@
     margin-top: -20px;
     margin-bottom: 48px;
   }
+  .galeria-cta-link {
+    text-align: center;
+    padding: 20px 0 48px;
+    background: var(--purple);
+  }
+  .galeria-cta-link a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .galeria-cta-link a:hover { opacity: 0.7; }
+
   .cardapio-cta-area {
     text-align: center;
-    margin-top: 20px;
-    padding-top: 52px;
-    border-top: 1px solid rgba(139,120,175,0.15);
+    background: var(--dark);
+    padding: 64px 5vw 72px;
+    margin-top: 0;
   }
   .cardapio-cta-text {
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     font-style: italic;
-    color: var(--text);
-    margin-bottom: 24px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 28px;
+  }
+
+  .cardapio-cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-secondary-light {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.25s, border-color 0.25s;
+  }
+  .btn-secondary-light:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.8);
   }
 
   /* ─── CONTATO section overrides ─── */
