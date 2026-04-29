@@ -36,7 +36,7 @@
     .header-logo {
       height: 64px;
       display: block;
-      margin: 0 auto 8px;
+      margin: 0 auto 18px;
     }
     .header-title {
       font-family: 'Great Vibes', cursive;
@@ -428,9 +428,12 @@
     }
     footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
 
-    /* subcat-nav: compensar header mais alto que no index.html */
-    .subcat-nav { top: 232px; }
-    @media (max-width: 600px) { .subcat-nav { top: 200px; } }
+    /* cardápio: reduzir padding-top pois a seção vem direto após o header */
+    #cardapio.section-pad { padding-top: 48px; }
+
+    /* subcat-nav: compensar header (logo + subtitle) + tabs */
+    .subcat-nav { top: 200px; }
+    @media (max-width: 600px) { .subcat-nav { top: 175px; } }
 
     /* ── Responsivo ──────────────────────────────────────────────────────── */
     @media (max-width: 600px) {
@@ -440,4 +443,32 @@
       .wpp-fab span { display: none; }
       .wpp-fab { padding: 16px; border-radius: 50%; }
     }
+
+/* ── BLOCO DE PREÇO (exclusivo do cardapio.html) ──────────────────────────── */
+.product-price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--purple-pale);
+}
+.price-uni {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--dark);
+}
+.price-uni em,
+.price-cento em {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 0.78rem;
+}
+.price-cento {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.80rem;
+  color: var(--text);
+}
   

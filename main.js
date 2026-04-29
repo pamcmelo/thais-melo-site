@@ -301,6 +301,19 @@
     html += `</div>`;
     html += `<div class="product-info"><h3 class="product-name">${name}</h3>`;
     if (desc) html += `<p class="product-desc">${desc}</p>`;
+    if (window.TATA_SHOW_PRICES) {
+      const precoUni   = (p['Preco-uni']    || '').trim();
+      const precoCento = (p['Preco-cento']  || '').trim();
+      if (precoUni || precoCento) {
+        html += `<div class="product-price-block">`;
+        if (precoUni) html += `<span class="price-uni">${escapeHtml(precoUni)} <em>/ unid.</em></span>`;
+        if (precoCento) {
+          const centoFmt = precoCento.startsWith('R$') ? precoCento : 'R$' + precoCento;
+          html += `<span class="price-cento">${escapeHtml(centoFmt)} <em>/ cento</em></span>`;
+        }
+        html += `</div>`;
+      }
+    }
     html += `</div></div>`;
     return html;
   }
