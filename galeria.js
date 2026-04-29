@@ -77,7 +77,6 @@
   const lb        = document.getElementById('lightbox');
   const lbImg     = document.getElementById('lbImg');
   const lbCounter = document.getElementById('lbCounter');
-  const lbCaption = document.getElementById('lbCaption');
 
   function openLightbox(i) {
     lbIndex = i;
@@ -97,7 +96,6 @@
     lbImg.alt = p.alt;
     lbImg.onload = () => lbImg.classList.add('loaded');
     lbCounter.textContent = `${lbIndex + 1} / ${activeList.length}`;
-    lbCaption.textContent = p.alt;
   }
   function next() { lbIndex = (lbIndex + 1) % activeList.length; showImage(); }
   function prev() { lbIndex = (lbIndex - 1 + activeList.length) % activeList.length; showImage(); }

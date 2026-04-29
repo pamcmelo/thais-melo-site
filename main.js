@@ -214,6 +214,7 @@
     // Agrupa: { Categoria: { intro, subcats: { SubCategoria: [produtos] }, subcatOrder: [] } }
     const grouped = {};
     for (const item of data) {
+      if (item['status'] !== 'ativo') continue;
       const cat = normalizeCategory(item['Categoria'] || '');
       if (!CATEGORY_TO_PANEL[cat]) continue;
       if (!grouped[cat]) grouped[cat] = { intro: '', subcats: {}, subcatOrder: [] };
@@ -281,6 +282,8 @@
     return html;
   }
 
+  const FLAG_SLUG = { 'Em Breve': 'em-breve', 'Lançamento': 'lancamento', 'Mais Pedido': 'mais-pedido' };
+
   function renderProductCard(p) {
     const name = escapeHtml(p['Produto'] || '');
     const desc = p['Descricao'] ? escapeHtml(p['Descricao']) : '';
@@ -288,9 +291,14 @@
     const imgSrc = imgFile
       ? 'FILES/fotos-produtos/' + imgFile.replace(/ /g, '%20')
       : 'FILES/fotos-produtos/placeholder.png';
+    const flag = (p['flag'] || '').trim();
+    const flagSlug = FLAG_SLUG[flag] || '';
 
     let html = `<div class="product-card">`;
+    html += `<div class="product-img-wrap">`;
     html += `<img class="product-img" src="${imgSrc}" alt="${name}" loading="lazy">`;
+    if (flag && flagSlug) html += `<span class="product-badge product-badge--${flagSlug}">${escapeHtml(flag)}</span>`;
+    html += `</div>`;
     html += `<div class="product-info"><h3 class="product-name">${name}</h3>`;
     if (desc) html += `<p class="product-desc">${desc}</p>`;
     html += `</div></div>`;
