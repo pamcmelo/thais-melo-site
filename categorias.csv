@@ -1,7 +1,7 @@
 Produto,Categoria,Sub-categoria,Descricao,flag,Preco-uni,Preco-cento,cardapio-intro,prod-img,status
 Bombom de Morango,Bombons,Bombons,"Morango envolto em massa branca, finalizado com delicioso chocolate nobre ao leite.",,R$4.90,"490,00",Pedido mínimo de 20 unidades por sabor. Todos vão acompanhados de forminhas sanfonadas comum. Forminhas 4 pétalas serão cobradas à parte,bombommorango.jpeg,ativo
 Bombom de Uva,Bombons,Bombons,"Uva verde envolto em massa branca, finalizado com delicioso chocolate nobre ao leite.",,R$4.10,"410,00",Pedido mínimo de 20 unidades por sabor. Todos vão acompanhados de forminhas sanfonadas comum. Forminhas 4 pétalas serão cobradas à parte,bombomuva.jpeg,ativo
-Bombom de Cereja,Bombons,Bombons,"Cereja marroquino envolto em massa branca, finalizado com delicioso chocolate nobre ao leite.",,R$3.50,"350,00",Pedido mínimo de 20 unidades por sabor. Todos vão acompanhados de forminhas sanfonadas comum. Forminhas 4 pétalas serão cobradas à parte,bombomcereja.JPG,ativo
+Bombom de Cereja,Bombons,Bombons,"Cereja marroquino envolto em massa branca, finalizado com delicioso chocolate nobre ao leite.",,R$3.50,"350,00",Pedido mínimo de 20 unidades por sabor. Todos vão acompanhados de forminhas sanfonadas comum. Forminhas 4 pétalas serão cobradas à parte,bombomcereja.jpg,ativo
 Pistache,Brigadeiros,Brigadeiros Especiais,,,R$3.90,R$390.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",brigpistache.jpeg,ativo
 Ouriço,Brigadeiros,Brigadeiros Especiais,,,R$2.90,R$290.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",ourico.jpeg,ativo
 Nozes,Brigadeiros,Brigadeiros Especiais,,,R$2.90,R$290.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",nozes.jpeg,ativo
@@ -23,7 +23,7 @@ Banoffe,Brigadeiros,Brigadeiros Gourmet,,,R$2.70,R$260.00,"Vendidos em centos ou
 Nutty Cream,Brigadeiros,Brigadeiros Especiais,,,"3,60",R$290.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",nuttycream.jpeg,ativo
 Chocolate Belga ao Leite,Brigadeiros,Brigadeiros Linha Belga,,,R$3.40,R$340.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",belgaaoleite.jpeg,ativo
 Chocolate Belga Meio-Amargo,Brigadeiros,Brigadeiros Linha Belga,,,R$3.40,R$340.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",belgaamargo.jpeg,ativo
-Chocolate Belga ao Leite Branco,Brigadeiros,Brigadeiros Linha Belga,,,R$3.40,R$340.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",,ativo
+Chocolate Belga ao Leite Branco,Brigadeiros,Brigadeiros Linha Belga,,,R$3.40,R$340.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",belgabranco.jpeg,ativo
 Choconinho,Brigadeiros,Brigadeiros Tradicionais,,,R$2.40,R$210.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",choconinho.jpeg,ativo
 Bicho de Pé,Brigadeiros,Brigadeiros Tradicionais,,,"2,40",R$210.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",bichodepe.jpeg,ativo
 Brigadeiro de Chocolate ao Leite tradicional ,Brigadeiros,Brigadeiros Tradicionais,,,"2,40",R$210.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",tradicional.jpeg,ativo
@@ -31,16 +31,16 @@ Beijinho,Brigadeiros,Brigadeiros Tradicionais,,,"2,40",R$210.00,"Vendidos em cen
 Leite Ninho,Brigadeiros,Brigadeiros Tradicionais,,,R$2.40,R$210.00,"Vendidos em centos ou em caixas menores que podem ser encontrados na sessão ""Caixas de Brigadeiro"".",ninho.jpg,ativo
 12 Unidades,Caixas de Brigadeiro,Caixas de Brigadeiro,Até 6 sabores a serem escolhidos dentre os sabores disponíveis no cardápio de Brigadeiros.,,"48,00",,"Os deliciosos brigadeiros agora em caixinhas menores para você presentear alguém. Ou então, só pra você!",caixa12uni.jpg,ativo
 25 Unidades,Caixas de Brigadeiro,Caixas de Brigadeiro,Até 5 sabores a serem escolhidos dentre os sabores disponíveis no cardápio de Brigadeiros.,,"95,90",,"Os deliciosos brigadeiros agora em caixinhas menores para você presentear alguém. Ou então, só pra você!",caixa25uni.jpeg,ativo
-50 Unidades,Caixas de Brigadeiro,Caixas de Brigadeiro,Mínimo de 10 unidades de cada sabor.,,R$190.00,,"Os deliciosos brigadeiros agora em caixinhas menores para você presentear alguém. Ou então, só pra você!",,ativo
+50 Unidades,Caixas de Brigadeiro,Caixas de Brigadeiro,Mínimo de 10 unidades de cada sabor.,,R$190.00,,"Os deliciosos brigadeiros agora em caixinhas menores para você presentear alguém. Ou então, só pra você!",caixa50.jpeg,ativo
 Outras quantidades abaixo de um cento e acima de 50: Sob consulta,Caixas de Brigadeiro,Caixas de Brigadeiro,Quantidades de cada sabor sob consulta.,,Valor Sob Consulta,,"Os deliciosos brigadeiros agora em caixinhas menores para você presentear alguém. Ou então, só pra você!",caixaoutrasunis.jpg,ativo
 Bombom de Maracujá,Doces Finos,Bombons,"Casquinha de chocolate branco, recheado de ganache de maracujá e geleia artesanal da fruta.",,R$3.90,,Pedido mínimo de 20 unidades por sabor.,bombommaracuja.jpeg,ativo
-Bombom de Cereja,Doces Finos,Bombons,"Cereja com brigadeiro branco, coberto com chocolate meio amargo.",,R$3.50,,Pedido mínimo de 20 unidades por sabor.,bombomcereja.JPG,ativo
+Bombom de Cereja,Doces Finos,Bombons,"Cereja com brigadeiro branco, coberto com chocolate meio amargo.",,R$3.50,,Pedido mínimo de 20 unidades por sabor.,bombomcereja.jpeg,ativo
 Bombom de Caramelo Salgado,Doces Finos,Bombons,"Casquinha de chocolate ao leite, recheado com caramelo salgado artesanal.",,R$3.80,,Pedido mínimo de 20 unidades por sabor.,bombomcaramelosalgado.jpeg,ativo
 Bombom Suiço,Doces Finos,Bombons,"O beijinho único que você já conhece, com doce de leite e coberto com chocolate branco.",,R$3.00,,Pedido mínimo de 20 unidades por sabor.,bombomsuico.jpeg,ativo
-Bombom de Laranja,Doces Finos,Bombons,"Casquinha de chocolate ao leite, recheado de ganache de laranja.",,R$3.00,,Pedido mínimo de 20 unidades por sabor.,,ativo
+Bombom de Laranja,Doces Finos,Bombons,"Casquinha de chocolate ao leite, recheado de ganache de laranja.",,R$3.00,,Pedido mínimo de 20 unidades por sabor.,-,inativo
 Bombom de Morango,Doces Finos,Bombons,Morango com brigadeiro branco coberto de chocolate ao leite.,,R$4.90,,Pedido mínimo de 20 unidades por sabor.,bombommorango.jpeg,ativo
 Bombom de Cookies'n Cream,Doces Finos,Bombons,Bombom de chocolate branco com pedacinhos de bolacha Oreo.,,R$3.50,,Pedido mínimo de 20 unidades por sabor.,-,inativo
-Bombom Bayles,Doces Finos,Bombons,Casquinha de chocolate ao leite recheado com ganache de licor Baileys.,,R$5.00,,Pedido mínimo de 20 unidades por sabor.,,ativo
+Bombom Bayles,Doces Finos,Bombons,Casquinha de chocolate ao leite recheado com ganache de licor Baileys.,,R$5.00,,Pedido mínimo de 20 unidades por sabor.,bombombayles.jpeg,ativo
 Bombom Jack Daniel's,Doces Finos,Bombons,Casquinha de chocolate recheada com ganache de whisky Jack Daniel's.,,R$5.00,,Pedido mínimo de 20 unidades por sabor.,-,inativo
 Bombom de Pistache,Doces finos,Bombons,Recheio macio de pistache com uma casquinha fina e crocante de chocolate,Lançamento ,R$4.80,,Pedido mínimo de 20 unidades por sabor.,bombompistache.jpeg,ativo
 Bombom Nuts,Doces finos,Bombons,Um mix de oleaginosas coberto de chocolate branco,Lançamento ,"R$3,80",,Pedido mínimo de 20 unidades por sabor.,bombomnuts.jpeg,ativo
