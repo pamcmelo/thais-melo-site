@@ -171,18 +171,32 @@
 <script src="main.js"></script>
 <script>
 (function () {
+  var header = document.querySelector('header');
+  var tabs   = document.querySelector('.tabs');
+
   function syncSticky() {
-    var header = document.querySelector('header');
-    var tabs   = document.querySelector('.tabs');
     if (!header || !tabs) return;
     var hh = header.offsetHeight;
+    var th = tabs.offsetHeight;
     tabs.style.top = hh + 'px';
-    var sub = document.querySelector('.subcat-nav');
-    if (sub) sub.style.top = (hh + tabs.offsetHeight) + 'px';
+    document.querySelectorAll('.subcat-nav').forEach(function (sub) {
+      sub.style.top = (hh + th) + 'px';
+    });
   }
+
+  // Sync imediato (tabs já existem; subcat-nav ainda não)
   syncSticky();
   window.addEventListener('resize', syncSticky);
-  // Re-sync após trocar de aba (cada painel pode ter seu subcat-nav)
+
+  // Detecta quando main.js injetar o subcat-nav via innerHTML assíncrono
+  var debounce;
+  new MutationObserver(function () {
+    clearTimeout(debounce);
+    debounce = setTimeout(syncSticky, 50);
+  }).observe(document.getElementById('cardapio') || document.body,
+    { childList: true, subtree: true });
+
+  // Re-sync ao trocar de aba
   document.addEventListener('click', function (e) {
     if (e.target.classList.contains('tab-btn')) setTimeout(syncSticky, 30);
   });
