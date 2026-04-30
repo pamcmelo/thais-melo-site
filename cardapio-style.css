@@ -433,7 +433,7 @@
 
     /* subcat-nav: compensar header (logo + subtitle) + tabs */
     .subcat-nav { top: 200px; }
-    @media (max-width: 600px) { .subcat-nav { top: 175px; } }
+    @media (max-width: 600px) { .subcat-nav { top: 170px; } }
 
     /* ── Responsivo ──────────────────────────────────────────────────────── */
     @media (max-width: 600px) {
