@@ -194,7 +194,7 @@
   async function initCardapioDinamico() {
     let text;
     try {
-      const res = await fetch('categorias.csv');
+      const res = await fetch('/categorias.csv');
       text = await res.text();
     } catch (e) {
       console.warn('Cardápio CSV indisponível:', e);
