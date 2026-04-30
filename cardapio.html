@@ -169,6 +169,25 @@
 
 <script>window.TATA_SHOW_PRICES = true;</script>
 <script src="main.js"></script>
+<script>
+(function () {
+  function syncSticky() {
+    var header = document.querySelector('header');
+    var tabs   = document.querySelector('.tabs');
+    if (!header || !tabs) return;
+    var hh = header.offsetHeight;
+    tabs.style.top = hh + 'px';
+    var sub = document.querySelector('.subcat-nav');
+    if (sub) sub.style.top = (hh + tabs.offsetHeight) + 'px';
+  }
+  syncSticky();
+  window.addEventListener('resize', syncSticky);
+  // Re-sync após trocar de aba (cada painel pode ter seu subcat-nav)
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('tab-btn')) setTimeout(syncSticky, 30);
+  });
+})();
+</script>
 
 </body>
 </html>
