@@ -289,8 +289,8 @@
     const desc = p['Descricao'] ? escapeHtml(p['Descricao']) : '';
     const imgFile = p['prod-img'];
     const imgSrc = imgFile
-      ? 'FILES/fotos-produtos/' + imgFile.replace(/ /g, '%20')
-      : 'FILES/fotos-produtos/placeholder.png';
+      ? '/FILES/fotos-produtos/' + imgFile.replace(/ /g, '%20')
+      : '/FILES/fotos-produtos/placeholder.png';
     const flag = (p['flag'] || '').trim();
     const flagSlug = FLAG_SLUG[flag] || '';
 
