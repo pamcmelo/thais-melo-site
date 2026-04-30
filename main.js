@@ -306,7 +306,16 @@
       const precoCento = (p['Preco-cento']  || '').trim();
       if (precoUni || precoCento) {
         html += `<div class="product-price-block">`;
-        if (precoUni) html += `<span class="price-uni">${escapeHtml(precoUni)} <em>/ unid.</em></span>`;
+        if (precoUni) {
+          let precoDisplay = precoUni;
+          let precoNota = '';
+          const notaIdx = precoUni.indexOf('dependendo do');
+          if (notaIdx !== -1) {
+            precoDisplay = precoUni.slice(0, notaIdx).trim();
+            precoNota = precoUni.slice(notaIdx).trim();
+          }
+          html += `<span class="price-uni">${escapeHtml(precoDisplay)} <em>${precoNota ? escapeHtml(precoNota) + ' · ' : ''}/ unid.</em></span>`;
+        }
         if (precoCento) {
           const centoFmt = precoCento.startsWith('R$') ? precoCento : 'R$' + precoCento;
           html += `<span class="price-cento">${escapeHtml(centoFmt)} <em>/ cento</em></span>`;
