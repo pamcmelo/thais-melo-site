@@ -252,7 +252,7 @@
     const multiSubcat = subcatOrder.length > 1;
     let html = '';
 
-    if (multiSubcat) {
+    if (multiSubcat && panelId !== 'doces-finos') {
       html += `<div class="subcat-nav">`;
       html += `<a data-filter="all" class="subcat-active" onclick="filterSubcat(this,'panel-${panelId}','all')">Todos</a>`;
       for (const subcat of subcatOrder) {
