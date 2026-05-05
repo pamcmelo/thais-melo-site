@@ -27,6 +27,7 @@
 <!-- Mobile nav overlay -->
 <div class="mobile-nav" id="mobileNav">
   <a href="#sobre" onclick="closeMobileNav()">Sobre nós</a>
+  <a href="#depoimentos" onclick="closeMobileNav()">Depoimentos</a>
   <a href="#cardapio" onclick="closeMobileNav()">Cardápio</a>
   <a href="galeria.html" onclick="closeMobileNav()">Galeria</a>
   <a href="#orcamentos" onclick="closeMobileNav()">Orçamentos</a>
@@ -134,6 +135,49 @@
       <!-- 📷 SUBSTITUIR: Esta imagem deve mostrar uma mesa de casamento com os doces montados (foto do evento real) -->
     </div>
   </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="section-pad">
+  <div class="container">
+    <div class="depoimentos-header">
+      <span class="section-eyebrow fade-up">O que nossas clientes dizem</span>
+      <h2 class="section-title fade-up fade-up-delay-1">Palavras que nos movem</h2>
+      <div class="divider center fade-up fade-up-delay-2"></div>
+    </div>
+  </div>
+  <div class="depoimentos-carousel-wrapper">
+    <button class="dep-arrow dep-arrow-left" onclick="scrollDepoimentos(-1)">&#8249;</button>
+    <div class="depoimentos-scroll" id="depoimentosScroll">
+      <div class="depoimento-card fade-up">
+        <span class="depoimento-aspas">&ldquo;</span>
+        <p class="depoimento-text">Thais, maravilhosa! Que Doces lindos e deliciosos. Todo mundo amou (e eu agradeci a Deus por ter sobrado para que eu pudesse comer depois do casamento). Obrigada, obrigada, obrigada! Estavam perfeitos e a mesa ficou um evento a parte!</p>
+        <span class="depoimento-data">Abril de 2026</span>
+      </div>
+      <div class="depoimento-card fade-up fade-up-delay-1">
+        <span class="depoimento-aspas">&ldquo;</span>
+        <p class="depoimento-text">A primeira impressão que salta aos olhos é o capricho, todos os doces são muito lindos. Quanto ao sabor é só elogios, a qualidade dos produtos que você usa é de uma excelência excepcional. Muito bom mesmo, amamos!</p>
+        <span class="depoimento-data">Fevereiro de 2026</span>
+      </div>
+      <div class="depoimento-card fade-up fade-up-delay-2">
+        <span class="depoimento-aspas">&ldquo;</span>
+        <p class="depoimento-text">Que docinhos perfeitos! Amamos todos, juro! Com certeza vamos fechar com vocês o casamento. Eu queria comer uns 10 bombons de morango ali mesmo hahaha.</p>
+        <span class="depoimento-data">Maio de 2026</span>
+      </div>
+      <div class="depoimento-card fade-up fade-up-delay-1">
+        <span class="depoimento-aspas">&ldquo;</span>
+        <p class="depoimento-text">Oi Thais! Estava tudo uma delícia! Obrigada por todo o cuidado e dedicação.</p>
+        <span class="depoimento-data">Julho de 2025</span>
+      </div>
+      <div class="depoimento-card fade-up fade-up-delay-2">
+        <span class="depoimento-aspas">&ldquo;</span>
+        <p class="depoimento-text">Thais, seus docinhos fizeram o maior sucesso. Todo mundo amou e alguns até me pediram seu contato!</p>
+        <span class="depoimento-data">Junho de 2023</span>
+      </div>
+    </div>
+    <button class="dep-arrow dep-arrow-right" onclick="scrollDepoimentos(1)">&#8250;</button>
+  </div>
+  <div class="depoimentos-hint">← Deslize para ver mais →</div>
 </section>
 
 <!-- GALERIA -->

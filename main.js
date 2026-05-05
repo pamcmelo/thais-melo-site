@@ -56,6 +56,46 @@
     });
   }
 
+  // Depoimentos carousel
+  function scrollDepoimentos(dir) {
+    const scroller = document.getElementById('depoimentosScroll');
+    if (!scroller) return;
+    const card = scroller.querySelector('.depoimento-card');
+    if (!card) return;
+    scroller.scrollBy({ left: dir * (card.offsetWidth + 24), behavior: 'smooth' });
+  }
+
+  (function () {
+    const scroller = document.getElementById('depoimentosScroll');
+    if (!scroller) return;
+    const origCards = Array.from(scroller.querySelectorAll('.depoimento-card'));
+    if (!origCards.length) return;
+
+    origCards.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      scroller.appendChild(clone);
+    });
+
+    function setWidth() {
+      return origCards.reduce((s, c) => s + c.offsetWidth + 24, 0);
+    }
+
+    let busy = false;
+    scroller.addEventListener('scroll', () => {
+      if (busy) return;
+      if (scroller.scrollLeft >= setWidth()) {
+        busy = true;
+        scroller.style.scrollSnapType = 'none';
+        scroller.scrollLeft -= setWidth();
+        requestAnimationFrame(() => {
+          scroller.style.scrollSnapType = '';
+          busy = false;
+        });
+      }
+    }, { passive: true });
+  }());
+
   // Galeria scroll (setas manuais)
   function scrollGaleria(amount) {
     const el = document.getElementById('galeriaScroll');

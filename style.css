@@ -1072,6 +1072,100 @@
     border-color: rgba(255,255,255,0.8);
   }
 
+  /* ─── DEPOIMENTOS ─── */
+  #depoimentos { background: var(--cream); }
+  .depoimentos-header { text-align: center; margin-bottom: 48px; }
+  .depoimentos-carousel-wrapper { position: relative; overflow: hidden; }
+  .depoimentos-scroll {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px 5vw 20px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 5vw;
+  }
+  .depoimentos-scroll::-webkit-scrollbar { display: none; }
+  .depoimento-card {
+    flex-shrink: 0;
+    width: 360px;
+    scroll-snap-align: start;
+    background: #fff;
+    border: 1px solid rgba(139,120,175,0.15);
+    border-radius: 2px;
+    padding: 32px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 2px 16px rgba(61,53,80,0.05);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .depoimento-card:hover {
+    box-shadow: 0 8px 32px rgba(61,53,80,0.1);
+    transform: translateY(-3px);
+  }
+  .depoimento-aspas {
+    font-family: 'Great Vibes', cursive;
+    font-size: 56px;
+    color: var(--peach);
+    line-height: 0.8;
+    display: block;
+  }
+  .depoimento-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--text);
+    flex: 1;
+  }
+  .depoimento-data {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--peach);
+    display: block;
+    padding-top: 14px;
+    border-top: 1px solid rgba(139,120,175,0.12);
+  }
+  .dep-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px; height: 48px;
+    background: rgba(61,53,80,0.12);
+    color: var(--dark);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    font-size: 28px;
+    line-height: 1;
+    transition: background 0.2s;
+    border-radius: 2px;
+  }
+  .dep-arrow:hover { background: rgba(61,53,80,0.22); }
+  .dep-arrow-left { left: 0; }
+  .dep-arrow-right { right: 0; }
+  .depoimentos-hint {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    padding: 8px 0 0;
+  }
+  @media (min-width: 901px) { .depoimentos-hint { display: none; } }
+  @media (max-width: 900px) { .dep-arrow { display: none; } }
+  @media (max-width: 600px) { .depoimento-card { width: 76vw; } }
+
   /* ─── CONTATO section overrides ─── */
   .divider-light { background: rgba(255,255,255,0.3); }
   .contato-inner .wpp-btn-big {
