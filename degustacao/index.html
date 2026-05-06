@@ -402,6 +402,29 @@
     footer { flex-direction: column; align-items: flex-start; }
     .footer-links { gap: 16px; }
   }
+
+  @media (min-width: 860px) {
+    main.dg-has-result {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      padding: 40px;
+    }
+    main.dg-has-result .dg-hero {
+      flex: 0 0 420px;
+      padding: 0;
+      text-align: left;
+    }
+    main.dg-has-result .dg-hero h1 {
+      text-align: left;
+    }
+    main.dg-has-result .dg-resultado {
+      flex: 0 0 400px;
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
 </style>
 </head>
 <body>
@@ -508,12 +531,19 @@
       timer = setTimeout(lookup, 300);
     });
 
+    var mainEl = document.querySelector('main');
+
+    function setResult(html) {
+      result.innerHTML = html;
+      mainEl.classList.toggle('dg-has-result', html !== '');
+    }
+
     function lookup() {
       var raw = input.value.trim();
-      if (!raw) { result.innerHTML = ''; return; }
+      if (!raw) { setResult(''); return; }
       var num = parseInt(raw, 10);
-      if (isNaN(num) || num < 1) { result.innerHTML = ''; return; }
-      if (!csvData) { result.innerHTML = ''; return; }
+      if (isNaN(num) || num < 1) { setResult(''); return; }
+      if (!csvData) { setResult(''); return; }
 
       var seen    = {};
       var matches = [];
@@ -525,19 +555,21 @@
       });
 
       if (!matches.length) {
-        result.innerHTML =
+        setResult(
           '<div class="dg-not-found">' +
             '<p>Hmm, não encontramos esse número.<br>Confira a etiqueta ou fale com a Thais.</p>' +
             '<a class="dg-wpp-btn" href="' + WPP_NOT + '" target="_blank" rel="noopener">' +
               WPP_SVG + 'Falar com a Thais' +
             '</a>' +
-          '</div>';
+          '</div>'
+        );
         return;
       }
 
-      result.innerHTML =
+      setResult(
         '<p class="dg-doce-num">Doce #' + num + '</p>' +
-        matches.map(function (p) { return renderProductCard(withDisplayName(p)); }).join('');
+        matches.map(function (p) { return renderProductCard(withDisplayName(p)); }).join('')
+      );
     }
   }());
 </script>
