@@ -6,9 +6,9 @@
 0,Bombom de Cookies'n Cream,Doces Finos,Bombons,Bombom de chocolate branco com pedacinhos de bolacha Oreo.,,R$3.50,,Pedido mínimo de 20 unidades por sabor.,-,inativo
 0,Bombom Jack Daniel's,Doces Finos,Bombons,Casquinha de chocolate recheada com ganache de whisky Jack Daniel's.,,R$5.00,,Pedido mínimo de 20 unidades por sabor.,-,inativo
 0,"Docinho ""Hostea""",Doces Finos,Doces Finos,"Brigadeiro cremoso de ninho, com duas bases de chocolate branco e coração de chocolate ao leite.",,R$4.50,,Pedido mínimo de 20 unidades por sabor.,hostea.jpeg,inativo
-0,Bowl de cookies,Doces finos,Doces finos,Brigadeiro trufado envolto de uma casquinha deliciosa de chocolate branco com pedacinhos de biscoito oreo.,Em breve,-,,Pedido mínimo de 20 unidades por sabor.,-,inativo
-0,Crocante de nutella,Doces finos,Doces finos,Bombom de chocolate ao leite recheada de Nutella e pedacinhos sutis de massa folhada crocante. Uma verdadeira jóia!,Em breve,-,,Pedido mínimo de 20 unidades por sabor.,-,inativo
-0,Bombom Volcano,Doces finos,Doces finos,,Em breve,,,,-,inativo
+64,Bowl de cookies,Doces finos,Doces finos,Brigadeiro trufado envolto de uma casquinha deliciosa de chocolate branco com pedacinhos de biscoito oreo.,Lançamento ,R$4.70,,Pedido mínimo de 20 unidades por sabor.,bowldecookies.jpeg,ativo
+63,Crocante de Nutella,Doces finos,Doces finos,Bombom de chocolate ao leite recheada de Nutella e pedacinhos sutis de massa folhada crocante. Uma verdadeira jóia!,Lançamento ,R$4.90,,Pedido mínimo de 20 unidades por sabor.,crocantenutella.jpeg,ativo
+62,Bombom Volcano de Capuccino,Doces finos,Doces finos,"Bombom de ganache de capuccino, coberto de chocolate blend e branco lembrando o efeito de um vulcão",Lançamento,R$3.90,,Pedido mínimo de 20 unidades por sabor.,volcanocapuccino.jpeg,ativo
 0,Moscou Mule,Doces finos,Doces finos,,Em breve,,,,-,inativo
 0,Brigadeiros de Colher,Variados,Variados,"Os classicos brigadeiros da Tata servidos em copinhos individuais, perfeitos para mesas de doces.",,R$2.60 à R$3.95 dependendo do sabor escolhido,,Pedido mínimo de 20 unidades por sabor. Todos vão acompanhados de forminhas sanfonadas comum. Forminhas 4 pétalas serão cobradas à parte,brigdecolher.jpeg,ativo
 0,Bombom de Laranja,Doces Finos,Bombons,"Casquinha de chocolate ao leite, recheado de ganache de laranja.",,R$3.00,,Pedido mínimo de 20 unidades por sabor.,-,inativo
@@ -56,7 +56,7 @@
 40,Copinho de Phisalys,Doces Finos,Copinhos e Cestinhas,"Copinho de chocolate meio amargo, recheado com ganache de laranja, finalizado com Physalis.",,R$4.90,,Pedido mínimo de 20 unidades por sabor.,copinhophysalis.png,ativo
 41,Copinho de Cereja,Doces Finos,Copinhos e Cestinhas,"Copinho de chocolate meio amargo, recheado com ganache de chocolate blend finalizado com cereja.",,R$4.20,,Pedido mínimo de 20 unidades por sabor.,copinhocereja.jpeg,ativo
 42,Copinho de Chocolate com Maracuja,Doces Finos,Copinhos e Cestinhas,"Copinho de chocolate, recheado com ganache de maracujá, finalizado com nossa geleia artesanal.",,R$4.00,,Pedido mínimo de 20 unidades por sabor.,copinhomaracuja.jpeg,ativo
-43,Caixinha de Morango,Doces finos,Copinhos e Cestinhas,"Caixinha de chocolate nobre, recheada de um brigadeiro cremoso de chocolate finalizado com morango fresco.",Lançamento ,R$3.90,,Pedido mínimo de 20 unidades por sabor.,caixinhamorango.jpeg,ativo
+43,Caixinha de Morango,Doces finos,Copinhos e Cestinhas,"Caixinha de chocolate nobre, recheada de um brigadeiro cremoso de chocolate finalizado com morango fresco.",Lançamento ,R$4.50,,Pedido mínimo de 20 unidades por sabor.,caixinhamorango.jpeg,ativo
 44,Delícia de Limão,Doces Finos,Doces Finos,Nosso delicioso brigadeiro de limão finalizado com uma merengue divina!,,R$2.95,,Pedido mínimo de 20 unidades por sabor.,delicialimao.jpeg,ativo
 45,Cestinha de Nozes,Doces Finos,Doces Finos,"Brigadeiro de nozes envolto em nozes mariposa frescas, finalizado com açúcar cristal. Detalhe com fita de cetim.",,R$4.50,,Pedido mínimo de 20 unidades por sabor.,cestinhanozes.jpeg,ativo
 46,Camafeu de Nozes,Doces Finos,Doces Finos,"Brigadeiro especial de nozes, coberto com fondant, finalizado com nozes frescas.",Mais Pedido,R$3.90,,Pedido mínimo de 20 unidades por sabor.,camafeonozes.jpeg,ativo
@@ -73,4 +73,6 @@
 57,Bombom de Nozes,Doces finos ,Bombons,Nosso incrível Brigadeiro de nozes finalizado com uma casquinha de chocolate nobre ao leite.,Lançamento ,R$3.90,,Pedido mínimo de 20 unidades por sabor.,bombomnozes.jpeg,ativo
 58,Morango Cristal,Doces finos ,Doces finos,Morango fresco envolto em massa branquinha finalizado no açúcar cristal.,Lançamento ,R$4.10,,Pedido mínimo de 20 unidades por sabor.,morangocristal.jpg,ativo
 59,Brownie com Brigadeiro,Variados,Variados,A combinacao perfeita do brownie artesanal com o brigadeiro classico da Tata.,,R$3.20,,Pedido mínimo de 20 unidades por sabor. Todos vão acompanhados de forminhas sanfonadas comum. Forminhas 4 pétalas serão cobradas à parte,browniecombrigadeiro.jpeg,ativo
-60,Chocolate ao leite com confete,Brigadeiros,Brigadeiros Especiais,,,R$2.90,R$290,Pedido mínimo de 20 unidades por sabor,confete.jpeg,ativo
+60,Chocolate ao Leite com Confete,Brigadeiros,Brigadeiros Especiais,,,R$2.90,R$290,Pedido mínimo de 20 unidades por sabor,confete.jpeg,ativo
+61,Rendado de Laranja,Doces finos,Doces finos,Chocolate blend rendado recheado com ganache de laranja ,Lançamento,R$4.10,,Pedido mínimo de 20 unidades por sabor,rendadolaranja.jpeg,ativo
+65,Bombom Bueno,Doces finos,Bombons,"Bombom recheado de Nutella e creme tradicional da Kinder, assim como o Kinder Bueno.",Lançamento ,R$4.00,,Pedido mínimo de 20 unidades por sabor,bombombueno.jpeg,ativo
